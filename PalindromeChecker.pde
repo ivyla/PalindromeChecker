@@ -20,7 +20,7 @@ public boolean palindrome(String word)
   String reverse = new String("");
   int last = word.length();
   
-  for(int i = last; i >= 0; i++){
+  for(int i = last; i >= 0; i--){
   
     reverse = reverse + word.substring(i, i+1);
   
