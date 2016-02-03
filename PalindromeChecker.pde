@@ -27,12 +27,24 @@ back = back + word.charAt(i);
 
 }
 
+// for spaces
+for(int j = 0; j <= word.length()-1; j++){
+
+if(word.charAt(j) != ' '){
+
+space = space + word.substring(j, j+1);
+}
+}
+
   
   if(word.equals(back)){
   
   return true;
-  }
-  //your code here
+  } else{
   return false;
+  }
+  
+  //your code here
+  //return false;
 }
 
