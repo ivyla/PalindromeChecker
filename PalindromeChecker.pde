@@ -16,11 +16,12 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  
-  if(word.equals(reverse(word))){
+  String s = word.toLowerCase();
+  String t = onlyLetters(s);
+  if(t.equals(reverse(t))){
   
   return true;
-  }
+}
 
   return false;
 }
@@ -40,18 +41,32 @@ back = back + str.charAt(i);
 return back;
 }
 
-public String noSpaces(String s){
-
-  String blegh = new String();
+public String onlyLetters(String sString){
+  String word = new String();
+  for(int i = 0; i < sString.length(); i++){
   
-  for(int i = 0; i <= s.length()-1; i++){
-
-if(s.charAt(i) != ' '){
-
-blegh = blegh + s.substring(i, i+1);
+  if(Character.isLetter(sString.charAt(i)) == true){
+  
+  word = word + sString.substring(i, i+1);
+  }
+  
+  }
+  
+  return word;
 }
 
-}
-
-return blegh;
-}
+//public String noSpaces(String s){
+//
+//  String blegh = new String();
+//  
+//  for(int i = 0; i <= s.length()-1; i++){
+//
+//if(s.charAt(i) != ' '){
+//
+//blegh = blegh + s.substring(i, i+1);
+//}
+//
+//}
+//
+//return blegh;
+// }
