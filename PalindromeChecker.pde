@@ -17,34 +17,41 @@ public void setup()
 public boolean palindrome(String word)
 {
   
-String back = new String();
-String space = new String();
-String cap = new String();
-
-for(int i = word.length()-1; i >= 0; i--){
-
-back = back + word.charAt(i);
-
-}
-
-// for spaces
-for(int j = 0; j <= word.length()-1; j++){
-
-if(word.charAt(j) != ' '){
-
-space = space + word.substring(j, j+1);
-}
-}
-
-  
-  if(word.equals(back)){
+  if(word.equals(reverse(word))){
   
   return true;
-  } else{
-  return false;
   }
-  
-  //your code here
-  //return false;
+
+  return false;
 }
 
+
+public String reverse(String str)
+{
+ String back = new String();
+
+for(int i = str.length()-1; i >= 0; i--){
+
+back = back + str.charAt(i);
+
+    
+}
+
+return back;
+}
+
+public String noSpaces(String s){
+
+  String blegh = new String();
+  
+  for(int i = 0; i <= s.length()-1; i++){
+
+if(s.charAt(i) != ' '){
+
+blegh = blegh + s.substring(i, i+1);
+}
+
+}
+
+return blegh;
+}
